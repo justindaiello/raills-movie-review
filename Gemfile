@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'bcrypt', '~> 3.1.7'
 # Rubocop linting
 gem 'rubocop'
+# Use Bootstrap for CSS helpers
+gem 'bootstrap', '~> 4.3.1'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
