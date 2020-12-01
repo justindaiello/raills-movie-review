@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Flix</title>
+    <title>Movie Reviews</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,16 @@
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      Movie Review
+    </header>
+
+    <div class="content">
+      <%= yield %>
+    </div>
+
+    <footer>
+      Made with love by Justin
+    </footer>
   </body>
 </html>
