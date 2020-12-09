@@ -1,7 +1,7 @@
 # Movies Controller - generated with 'rails g controller movies'
 class MoviesController < ApplicationController
   def index
-    @movies = Movie.all
+    @movies = Movie.released
   end
 
   def show
