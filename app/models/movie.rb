@@ -1,5 +1,7 @@
 # Movie Model - generated with 'rails g model movie title:string rating:string total_gross:decimal'
 class Movie < ApplicationRecord
+  has_many :reviews, dependent: :destroy
+
   RATINGS = %w[G PG PG-13 R NC-17].freeze
 
   validates :rating, inclusion: { in: RATINGS }
