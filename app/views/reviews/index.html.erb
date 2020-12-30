@@ -1,0 +1,17 @@
+<h1>Review for: <%= link_to @movie.title, @movie %></h1>
+<ul class="reviews">
+  <% @reviews.each do |r| %>
+    <li>
+      <%= render "shared/stars", percent: r.stars_as_percent %>
+      <p>
+        <%= r.name %>
+        <span class="date">
+          <%= time_ago_in_words(r.created_at) %> ago
+        </span>
+      </p>
+      <p>
+        <%= r.comment %>
+      </p>
+    </li>
+  <% end %>
+</ul>
