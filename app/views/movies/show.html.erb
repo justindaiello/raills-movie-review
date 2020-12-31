@@ -8,8 +8,12 @@
     </h1>
     <h2>
       <%= year_of(@movie) %> &bull; <%= @movie.rating %>
-      <%= link_to pluralize(@movie.reviews.size, 'Review'), movie_reviews_path(@movie) %>
     </h2>
+    <div class="reviews">
+      <%= render "shared/stars", percent: @movie.average_stars_as_percent %>
+      <%= link_to pluralize(@movie.reviews.size, "review"),
+                    movie_reviews_path(@movie) %>
+    </div>
     <p>
       <%= @movie.description %>
     </p>
