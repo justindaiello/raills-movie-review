@@ -16,6 +16,9 @@ class ApplicationController < ActionController::Base
   helper_method :current_user?
 
   def require_signin
-    redirect_to new_session_url, alert: 'You must be signed in!' unless current_user
+    return if current_user
+
+    session[:intended_url] = request.url
+    redirect_to new_session_url, alert: 'You must be signed in!'
   end
 end
